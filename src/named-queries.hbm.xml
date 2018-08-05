@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+	
+<hibernate-mapping>
+	<query name="HQL_GET_ALL_MOBILES">from Mobile</query>
+
+	<query name="HQL_GET_MOBILE_BY_ID">
+		<![CDATA[from Mobile where id = :id]]>
+	</query>
+	<sql-query name="SQL_GET_ALL_MOBILE">
+		<![CDATA[select id, mobile_name, mobile_model, mobile_price from Mobile]]>
+	</sql-query>
+	
+ 
+</hibernate-mapping>

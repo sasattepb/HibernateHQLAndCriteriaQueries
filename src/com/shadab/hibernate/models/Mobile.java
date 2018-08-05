@@ -17,6 +17,10 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="mobile")
+@NamedQueries({ @NamedQuery(name = "@HQL_GET_ALL_MOBILES", 
+query = "from Mobile") })
+@NamedNativeQueries({ @NamedNativeQuery(name = "@SQL_GET_ALL_MOBILES", 
+query = "select id, mobile_name, mobile_model, mobile_price from Mobile",resultSetMapping = "updateResult") })
 public class Mobile {
 	@Id
 	@GeneratedValue
